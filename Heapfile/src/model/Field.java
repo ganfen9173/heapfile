@@ -21,6 +21,8 @@ public class Field {
 		this.content = str2byte(str);
 	}
 	
+	
+	
 	public byte[] int2byte(int num) {
 		ByteBuffer buffer = ByteBuffer.allocate(Integer.BYTES);
 		buffer.putInt(num);
@@ -36,6 +38,8 @@ public class Field {
 	public byte[] str2byte(String str) {
 		return str.getBytes();
 	}
+	
+	
 	
 	public static void main(String[] args) {
 		Field f = new Field("asdf");

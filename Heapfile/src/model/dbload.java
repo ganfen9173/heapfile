@@ -9,17 +9,23 @@ public class dbload {
 	static String csvFilename = "";
 	static int pageSize = 0;
 
-	public void loadFile() {
+	public static void loadFile() {
 		BufferedReader br = null;
 		try {
 			br = new BufferedReader(new FileReader(csvFilename));
-			br.readLine();
+			
+			String columns[]; //contains column names
+			int num_cols = br.readLine().split(",").length;
 			//skip first line
 			String firstLine = "";
 			while ((firstLine = br.readLine()) != null){ //loop will run from 2nd line
-				
+				String[] tokens = firstLine.split(",");
+				if(tokens.length == num_cols) {
+					
+				}
 			}
-			
+			System.out.println(br.readLine());
+			System.out.println(num_cols);
 		} catch (IOException e) {
 			System.out.println("Exception when trying to read file ");
 			e.printStackTrace();		
@@ -81,7 +87,7 @@ public class dbload {
 			aborting =true;
 		}
 		if(!aborting) {
-			
+			loadFile();
 		}
 	}
 
