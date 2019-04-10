@@ -18,10 +18,16 @@ public class dbload {
 			int num_cols = br.readLine().split(",").length;
 			//skip first line
 			String firstLine = "";
+			int byte_cnt = 0;
 			while ((firstLine = br.readLine()) != null){ //loop will run from 2nd line
+				int record_byte_cnt = 0;
 				String[] tokens = firstLine.split(",");
 				if(tokens.length == num_cols) {
-					
+					for (int i=0;i<num_cols;i++) {
+						if(i==0) {
+							
+						}
+					}
 				}
 			}
 			System.out.println(br.readLine());
