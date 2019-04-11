@@ -42,7 +42,7 @@ public class Field {
 	
 	
 	public static void main(String[] args) {
-		Field f = new Field("asdf");
+		Field f = new Field(2);
 
 		System.out.println(f.content);
 	}

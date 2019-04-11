@@ -25,10 +25,41 @@ public class dbload {
 				if(tokens.length == num_cols) {
 					for (int i=0;i<num_cols;i++) {
 						if(i==0) {
-							
+							record_byte_cnt = record_byte_cnt + 4;
+						} else if(i == 1) {
+							record_byte_cnt = record_byte_cnt + 8;
+						} else if(i == 2) {
+							record_byte_cnt = record_byte_cnt + 8;
+						} else if(i == 3) {
+							record_byte_cnt = record_byte_cnt + 8;
+						} else if(i == 4) {
+							record_byte_cnt = record_byte_cnt + tokens[i].length() +4;
+						} else if(i == 5) {
+							if (tokens[i].length() == 0) {
+								tokens[i] ="########";
+							}
+							record_byte_cnt = record_byte_cnt + tokens[i].length() +4;
+						} else if(i == 6) {
+							record_byte_cnt = record_byte_cnt + tokens[i].length() +4;
+						} else if(i == 7) {
+							record_byte_cnt = record_byte_cnt + 4;
+						} else if(i == 8) {
+							record_byte_cnt = record_byte_cnt + tokens[i].length() +4;
+						} else if(i == 9) {
+							record_byte_cnt = record_byte_cnt + tokens[i].length() +4;
+						} else if(i == 10) {
+							if (tokens[i].length() == 0) {
+								tokens[i] ="########";
+							}
+							record_byte_cnt = record_byte_cnt + tokens[i].length() +4;
+						} else if(i == 11) { 
+							record_byte_cnt = record_byte_cnt +4;
+						} else if(i == 12) {
+							record_byte_cnt = record_byte_cnt + tokens[i].length() +4;
 						}
 					}
 				}
+				System.out.println(record_byte_cnt);
 			}
 			System.out.println(br.readLine());
 			System.out.println(num_cols);
