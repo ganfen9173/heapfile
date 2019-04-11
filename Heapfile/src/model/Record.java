@@ -3,13 +3,13 @@ package model;
 public class Record {
 	long pos;
 	
-	Field[] fields;
+	String[] record;
 	
 	byte[] content;
 	
 	public Record() {
 		pos = 0;
-		fields = new Field[13];
+		record = new String[13];
 		this.content = new byte[2];
 	}
 	
@@ -51,6 +51,7 @@ public class Record {
 				} else if(i == 12) {
 					record_byte_cnt = record_byte_cnt + tokens[i].length() +4;
 				}
+				record[i] = tokens[i];
 			}
 		}
 	}
